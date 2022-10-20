@@ -19,6 +19,7 @@ func Index(s string, index uint) string {
 	return ""
 }
 
+//Perform the calculation.
 func compute(num1 float64, symbol string, num2 float64, result []string) []string {
 	switch symbol {
 	case "+":
