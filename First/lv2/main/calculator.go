@@ -64,7 +64,6 @@ func main() {
 				fmt.Println("regexp err")
 				return
 			} else {
-				//根据规则提取关键信息
 				result1 := reg1.FindAllStringSubmatch(symbol, -1)
 				//fmt.Printf("result1 = %T", result1)
 
