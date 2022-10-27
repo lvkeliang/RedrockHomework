@@ -149,9 +149,6 @@ func insertl(object Student_data, schoolnumber_before string) []Student_data {
 	return result
 }
 
-//优化掉的代码
-//else if
-
 // 定义按学号删除元素的函数
 func delete(schoolnumber string) {
 	for point := header_data.point; (*point).point != nil; point = (*point).point {
