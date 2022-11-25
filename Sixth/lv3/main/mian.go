@@ -34,7 +34,6 @@ func checklogin(c *gin.Context) {
 		cookie string
 	}
 	for rows.Next() {
-		// row.scan 必须按照先后顺序 &获取数据
 		err := rows.Scan(&user.id, &user.cookie)
 		if err != nil {
 			log.Println(err)
@@ -71,7 +70,6 @@ func checker(c *gin.Context) {
 		cookie string
 	}
 	for rows.Next() {
-		// row.scan 必须按照先后顺序 &获取数据
 		err := rows.Scan(&user.id, &user.cookie)
 		if err != nil {
 			log.Println(err)
@@ -173,7 +171,6 @@ func main() {
 		defer rows.Close()
 
 		for rows.Next() {
-			// row.scan 必须按照先后顺序 &获取数据
 			err := rows.Scan(&user.id, &user.name, &user.password)
 			if err != nil {
 				log.Println(err)
@@ -238,7 +235,6 @@ func main() {
 			password string
 		}
 		for rows.Next() {
-			// row.scan 必须按照先后顺序 &获取数据
 			err := rows.Scan(&user.id, &user.name, &user.password)
 			if err != nil {
 				log.Println(err)
@@ -370,7 +366,6 @@ func main() {
 			answer string
 		}
 		for rows.Next() {
-			// row.scan 必须按照先后顺序 &获取数据
 			err := rows.Scan(&user.id, &user.name, &user.answer)
 			if err != nil {
 				log.Println(err)
