@@ -1,0 +1,34 @@
+{{define "default/homepage.html"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+</head>
+<body>
+<form action="/homepage" method="post">
+    <h2>主页</h2>
+    <h3>留言板</h3> <br><br>
+
+    <table>
+    {{ range $v := .msgs}}
+        <tr>
+    <td>{{ $v.Id }}</td>
+    <td>{{ $v.Name }}</td>
+    <td>{{ $v.Message }}</td>
+    <td>{{ $v.Time }}</td>
+        </tr>
+    {{ end }}
+    </table>
+    <textarea name="texts" cols="50" rows="5">在此留言(100字以内）</textarea> <br><br> <input type = "submit" value="发布">
+
+
+    <a href="http://localhost:8080/announcement">注销</a>
+</form>
+
+</body>
+</html>
+
+{{end}}

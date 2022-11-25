@@ -1,0 +1,29 @@
+{{define "default/findback1.html"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find back</title>
+</head>
+<body>
+<form action="/findback/firststep" method="post">
+    <h2>账号找回</h2>
+    <table width="500">
+        <tr>
+            <td>用户名:</td>
+            <td><input type="text" name="username" /> <br><br></td>
+        </tr>
+
+        <tr>
+            <td><a href="http://localhost:8080/login">返回</a></td>
+            <td><input type="submit" value="提交"></td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
+
+{{end}}

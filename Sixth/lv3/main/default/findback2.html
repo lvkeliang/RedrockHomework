@@ -1,0 +1,34 @@
+{{define "default/findback2.html"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find back</title>
+</head>
+<body>
+<form action="/findback/secondstep" method="post">
+    <h2>密保问题</h2>
+    <h5>{{ .question }}</h5>
+    <table width="500">
+        <tr>
+            <td>答案:</td>
+            <td><input type="text" name="answer" /> <br><br></td>
+        </tr>
+        <tr>
+            <td>新密码:</td>
+            <td><input type="text" name="newpassword" /> <br><br></td>
+        </tr>
+
+        <tr>
+            <td><a href="http://localhost:8080/login">返回</a></td>
+            <td><input type="submit" value="提交"></td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
+
+{{end}}
