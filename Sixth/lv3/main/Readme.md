@@ -1,6 +1,6 @@
 ## 数据库结构
 
-## 数据库名：redrocksixth
+### 数据库名：redrocksixth
 
 | Tables_in_redrocksixth |
 | --- |
